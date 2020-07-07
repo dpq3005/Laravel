@@ -18,10 +18,7 @@ Route::get('/', function () {
     // return view('welcome');
 });
 
-Route::get('users','Users@index');
-Route::view('sample','test',['name'=>'SAMOKE']);
-Route::get('show/{id}','Users@show');
-
-Route::view('userview','form');
-Route::post('usercontroller','UsersController@account');
+// Route::post('usercontroller','UsersController@account');
+Route::get('usercontroller','UsersController@account');
+Route::view('user','form');
 

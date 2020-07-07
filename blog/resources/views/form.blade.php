@@ -1,5 +1,5 @@
 <h1>User Account</h1>
-<form action="usercontroller" method="post">
+<form action="usercontroller" method="get">
 <br>
 <input type="text" name="email">
 {{@csrf_field()}}
