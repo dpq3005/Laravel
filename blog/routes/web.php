@@ -22,5 +22,6 @@ Route::get('/', function () {
 // Route::post('usercontroller','UsersController@account');
 // Route::view('user','validation');
 
-Route::get('users','UsersController@index');
+Route::view('home','home');
+Route::view('profile','profile');
 
