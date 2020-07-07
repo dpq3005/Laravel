@@ -63,5 +63,6 @@ Route::get('/', function () {
 // });
 
 Route::post('profile','Profiles@store');
+Route::get('profile','Profiles@index');
 
-Route::view('profile','profile');
+// Route::view('profile','profile');

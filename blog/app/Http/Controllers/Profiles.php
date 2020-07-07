@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
+
 
 
 class Profiles extends Controller
@@ -20,5 +22,9 @@ class Profiles extends Controller
         // echo  "Hello from controller";
         $path = $req->file('img')->store('avatars');
         return ['path'=>$path,'upload'=>'success'];
+    }
+
+    function index(){
+        return DB::select('select * from youtubes');
     }
 }
