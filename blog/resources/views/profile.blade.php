@@ -1,3 +1,6 @@
-<h1>{{__('profile.welcome')}}</h1>
-<a href="#">{{__('profile.home')}}</a>
-<a href="">{{__('profile.setting')}}</a>
+<form action="profile" method="post" enctype="multipart/form-data">
+<input type="file" name="img">
+@csrf
+<button type="submit">Upload file</button>
+
+</form>

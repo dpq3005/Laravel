@@ -57,7 +57,11 @@ Route::get('/', function () {
 // Route::view('task','task');
 // Route::post('task','Tasks@index');
 
-Route::get('profile/{lang}',function($lang){
-  App::setLocale($lang);
-  return view('profile');
-});
+// Route::get('profile/{lang}',function($lang){
+//   App::setLocale($lang);
+//   return view('profile');
+// });
+
+Route::post('profile','Profiles@store');
+
+Route::view('profile','profile');

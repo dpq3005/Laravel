@@ -15,4 +15,10 @@ class Profiles extends Controller
 
         return view('profile',['data'=>$data]);
     }
+
+    function store(Request $req){
+        // echo  "Hello from controller";
+        $path = $req->file('img')->store('avatars');
+        return ['path'=>$path,'upload'=>'success'];
+    }
 }
