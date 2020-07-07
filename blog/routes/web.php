@@ -53,3 +53,6 @@ Route::group(['middleware'=>['customAuth']],function(){
   Route::view('profile','profile');
 
 });
+
+Route::view('task','task');
+Route::post('task','Tasks@index');
