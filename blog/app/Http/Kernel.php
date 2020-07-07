@@ -42,10 +42,11 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-        // 'customAuth' => [
-        // \App\Http\Middleware\checkAge::class
 
-        // ]
+        'customAuth' => [
+        \App\Http\Middleware\CustomAuth::class
+
+        ]
     ];
 
     /**

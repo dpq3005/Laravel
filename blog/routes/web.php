@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 
 // Route::post('usercontroller','UsersController@account');
 // Route::post('usercontroller','UsersController@account');
@@ -40,17 +38,18 @@ Route::view('login','login');
 
 Route::post('login','LoginController@login');
 
-Route::view('profile','profile');
 
-Route::get('profile/', function () {
-  if(!session()->has('loginData')){
-    return redirect('login');
-  }
-
-    return view('profile');
-});
 
 Route::get('logout',function(){
   session()->forget('loginData');
   return redirect('login');
+});
+
+Route::get('/', function () {
+  return view('welcome');
+});
+
+Route::group(['middleware'=>['customAuth']],function(){
+  Route::view('profile','profile');
+
 });
