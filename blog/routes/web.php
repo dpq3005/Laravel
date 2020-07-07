@@ -49,10 +49,15 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::group(['middleware'=>['customAuth']],function(){
-  Route::view('profile','profile');
+// Route::group(['middleware'=>['customAuth']],function(){
+//   Route::view('profile','profile');
 
+// });
+
+// Route::view('task','task');
+// Route::post('task','Tasks@index');
+
+Route::get('profile/{lang}',function($lang){
+  App::setLocale($lang);
+  return view('profile');
 });
-
-Route::view('task','task');
-Route::post('task','Tasks@index');
