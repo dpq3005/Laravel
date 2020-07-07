@@ -1,6 +1,5 @@
-<h1>Data list</h1>
-<ul>
-@foreach($data as $item)
-<li>{{$item['title']}}</li>
-@endforeach
-</ul>
+<h1>Profile page</h1>
+
+<h3>Welcome {{session('loginData')['user']}}</h3>
+
+<a href="logout">Logout</a>
