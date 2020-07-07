@@ -13,16 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::post('usercontroller','UsersController@account');
 // Route::post('usercontroller','UsersController@account');
 // Route::view('user','validation');
 
 // Route::view('home','home');
-// Route::view('profile','profile');
+Route::view('profile','profile')->middleware('customRouteAuth');
+
+// Route::group(['middleware'=>['customAuth']],function(){
+//     Route::get('/', function () {
+//         return view('welcome');
+//     });
+// });
+
+
 
 Route::view('noaccess','noaccess');
 
