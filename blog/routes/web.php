@@ -14,14 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('test');
-    // return view('welcome');
+    return view('welcome');
 });
 
 // Route::post('usercontroller','UsersController@account');
 // Route::post('usercontroller','UsersController@account');
 // Route::view('user','validation');
 
-Route::view('home','home');
-Route::view('profile','profile');
+// Route::view('home','home');
+// Route::view('profile','profile');
+
+Route::view('noaccess','noaccess');
 
