@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 // Route::post('usercontroller','UsersController@account');
-Route::get('usercontroller','UsersController@account');
-Route::view('user','form');
+Route::post('usercontroller','UsersController@account');
+Route::view('user','validation');
 

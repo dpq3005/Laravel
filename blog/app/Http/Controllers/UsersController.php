@@ -9,7 +9,11 @@ class UsersController extends Controller
     function account(Request $req){
         // return $req->input();
         // echo $req->input('email');
-        return $req->query();
+        $req->validate([
+            'address'=>'required | min:3 | max:7',
+            'email'=>'required | email'
+        ]);
+        return $req->input();
     }
 
     function index(){
