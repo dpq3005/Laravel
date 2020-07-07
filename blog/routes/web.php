@@ -22,3 +22,6 @@ Route::get('users','Users@index');
 Route::view('sample','test',['name'=>'SAMOKE']);
 Route::get('show/{id}','Users@show');
 
+Route::view('userview','form');
+Route::post('usercontroller','UsersController@account');
+
