@@ -18,12 +18,5 @@ Route::get('/', function () {
     // return view('welcome');
 });
 
-Route::get('/test/{id}',function($id) {
-    echo $id;
-    return view('test');
-});
-
-Route::get('/test',function() {
-    return view('test');
-});
-
+Route::get('users','Users@index');
+Route::get('show/{id}','Users@show');
