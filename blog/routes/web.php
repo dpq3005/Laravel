@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return redirect('test');
+    // return view('welcome');
+});
+
+Route::get('/test/{id}',function($id) {
+    echo $id;
     return view('test');
 });
+
+Route::get('/test',function() {
+    return view('test');
+});
+
