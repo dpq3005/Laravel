@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 // Route::view('user','validation');
 
 // Route::view('home','home');
-Route::view('profile','profile')->middleware('customRouteAuth');
+// Route::view('profile','profile')->middleware('customRouteAuth');
 
 // Route::group(['middleware'=>['customAuth']],function(){
 //     Route::get('/', function () {
@@ -32,5 +32,7 @@ Route::view('profile','profile')->middleware('customRouteAuth');
 
 
 
-Route::view('noaccess','noaccess');
+// Route::view('noaccess','noaccess');
+
+Route::get('profile','Profiles@list');
 

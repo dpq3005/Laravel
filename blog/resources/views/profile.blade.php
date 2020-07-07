@@ -1,7 +1,6 @@
-@extends('layout');
-
-@section('title','Profile')
-
-@section('content')
-<h1>Profile</h1>
-@endsection
+<h1>Data list</h1>
+<ul>
+@foreach($data as $item)
+<li>{{$item['title']}}</li>
+@endforeach
+</ul>
