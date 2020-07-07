@@ -25,6 +25,7 @@ class Profiles extends Controller
     }
 
     function index(){
-        return DB::select('select * from youtubes');
+        $data=DB::table('youtubes')->where('name','DPQ')->update(['view'=>'25555']);
+        print_r($data);
     }
 }
