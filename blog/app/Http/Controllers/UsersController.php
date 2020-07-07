@@ -17,6 +17,8 @@ class UsersController extends Controller
     }
 
     function index(){
-        echo "Hello controller";
+        $d = ['name'=>'DPQ1','email'=>'dp@gmail.com','address'=>
+    'TN'];
+        return view('users',['data'=>$d]);
     }
 }
