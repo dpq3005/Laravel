@@ -28,4 +28,9 @@ class Profiles extends Controller
         $data=DB::table('youtubes')->where('name','DPQ')->update(['view'=>'25555']);
         print_r($data);
     }
+
+    function pagination(){
+        $data = DB::table('users')->paginate(3);
+        return view('users',['data'=>$data]);
+    }
 }
