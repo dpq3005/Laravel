@@ -71,3 +71,7 @@ Route::get('list','Profiles@pagination');
 Route::get('order','Orders@index');
 
 Route::view('sample','sample');
+
+Route::view('form','userview');
+
+Route::post('submit','Users@save');
