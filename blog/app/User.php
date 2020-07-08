@@ -8,6 +8,6 @@ class User extends Model
 {
     //
     function myCompany(){
-        return $this->hasOne('App\Cmp');
+        return $this->hasMany('App\Cmp');
     }
 }
