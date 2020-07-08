@@ -62,22 +62,24 @@ Route::get('/', function () {
 //   return view('profile');
 // });
 
-Route::post('profile','Profiles@store');
-Route::get('profile','Profiles@index');
-Route::get('list','Profiles@pagination');
+// Route::post('profile','Profiles@store');
+// Route::get('profile','Profiles@index');
+// Route::get('list','Profiles@pagination');
 
 // Route::view('profile','profile');
 
-Route::get('order','Orders@index');
+// Route::get('order','Orders@index');
 
-Route::view('sample','sample');
+// Route::view('sample','sample');
 
 // Route::view('form','userview');
 
 // Route::post('submit','Users@save');
 
-Route::view('form','update');
+// Route::view('form','update');
 
 // Route::post('update','Users@update');
 
-Route::get('product','ProductController@index');
+// Route::get('product','ProductController@index');
+
+Route::get('user','Users@index');

@@ -25,4 +25,8 @@ class Users extends Controller
         $user->save();
     }
 
+    function index(){
+        return User::find(1)->myCompany;
+    }
+
 }

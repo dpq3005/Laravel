@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     //
-    public $timestamps = false;
+    function myCompany(){
+        return $this->hasOne('App\Cmp');
+    }
 }
