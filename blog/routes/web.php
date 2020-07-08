@@ -67,3 +67,5 @@ Route::get('profile','Profiles@index');
 Route::get('list','Profiles@pagination');
 
 // Route::view('profile','profile');
+
+Route::get('order','Orders@index');
