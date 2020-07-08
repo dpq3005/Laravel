@@ -72,6 +72,10 @@ Route::get('order','Orders@index');
 
 Route::view('sample','sample');
 
-Route::view('form','userview');
+// Route::view('form','userview');
 
-Route::post('submit','Users@save');
+// Route::post('submit','Users@save');
+
+Route::view('form','update');
+
+Route::post('update','Users@update');
