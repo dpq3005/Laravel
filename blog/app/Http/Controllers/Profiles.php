@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
+use App\User;
+use App\Product;
 
 
 
@@ -25,12 +27,13 @@ class Profiles extends Controller
     }
 
     function index(){
-        $data=DB::table('youtubes')->where('name','DPQ')->update(['view'=>'25555']);
-        print_r($data);
+        return Product::all();
     }
 
     function pagination(){
         $data = DB::table('users')->paginate(3);
         return view('users',['data'=>$data]);
     }
+
+ 
 }
