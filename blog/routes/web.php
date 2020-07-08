@@ -78,4 +78,6 @@ Route::view('sample','sample');
 
 Route::view('form','update');
 
-Route::post('update','Users@update');
+// Route::post('update','Users@update');
+
+Route::get('product','ProductController@index');

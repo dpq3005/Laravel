@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
-    protected $table='users';
+    public function setNameAttribute($value){
+        return $this->attributes['name']=ucfirst($value);
+    }
 }
